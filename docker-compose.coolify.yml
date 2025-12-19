@@ -23,6 +23,8 @@ services:
       - CLAUDE_API_KEY=${CLAUDE_API_KEY:-}
       - CLOUDRUN_HOST=${GREEN_AGENT_URL_NO_PROTOCOL}
       - HTTPS_ENABLED=true
+      - SUPABASE_URL=${SUPABASE_URL}
+      - SUPABASE_KEY=${SUPABASE_KEY}
     volumes:
       - green_agent_logs:/var/log/agents
     restart: unless-stopped
